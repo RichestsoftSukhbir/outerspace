@@ -50,10 +50,10 @@ function addStars() {
 
 Array(200).fill().forEach(addStars);
 
-const spaceTexture = new THREE.TextureLoader().load('./public/images/space.jpg')
+const spaceTexture = new THREE.TextureLoader().load('public/images/space.jpg')
 scene.background = spaceTexture;
 
-const sukhfxTexture = new THREE.TextureLoader().load('./public/images/sukhfx.jpg');
+const sukhfxTexture = new THREE.TextureLoader().load('public/images/sukhfx.jpg');
 const avatarBox = new THREE.Mesh(
   new THREE.BoxGeometry(4,4,4),
   new THREE.MeshPhongMaterial({map: sukhfxTexture, emissive: 0x000000, antialias: true, roughness: 0, metalness: 1})
@@ -61,8 +61,8 @@ const avatarBox = new THREE.Mesh(
 
 scene.add(avatarBox);
 
-const moonTexture = new THREE.TextureLoader().load('./public/images/moon-defuse.jpg');
-const moonTextureDepth = new THREE.TextureLoader().load('./public/images/moon-normal.jpg');
+const moonTexture = new THREE.TextureLoader().load('public/images/moon-defuse.jpg');
+const moonTextureDepth = new THREE.TextureLoader().load('public/images/moon-normal.jpg');
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
   new THREE.MeshStandardMaterial({map: moonTexture, normalMap: moonTextureDepth})
